@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bottomsheet_background">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/m_16dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/titleText"
+                style="@style/textStyle20"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/m_10dp"
+                android:fontFamily="@font/poppins_bold_700"
+                android:gravity="center"
+                android:paddingVertical="@dimen/m_5dp"
+                android:text="@string/create_user" />
+
+            <include
+                android:id="@+id/userNameContainer"
+                layout="@layout/layout_input_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/m_10dp" />
+
+
+            <include
+                android:id="@+id/userEmailContainer"
+                layout="@layout/layout_input_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/m_16dp" />
+
+            <include
+                android:id="@+id/userAddressContainer"
+                layout="@layout/layout_input_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/m_16dp" />
+
+            <TextView
+                android:id="@+id/hintTextView"
+                style="@style/textStyle12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/m_16dp"
+                android:gravity="center_vertical"
+                android:paddingVertical="@dimen/m_5dp"
+                android:text="@string/gender" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/m_5dp"
+                android:background="@color/backgroundColor"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/male"
+                    style="@style/textStyle14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/male" />
+
+                <RadioButton
+                    android:id="@+id/female"
+                    style="@style/textStyle14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="@dimen/m_10dp"
+                    android:gravity="center"
+                    android:text="@string/female" />
+
+                <RadioButton
+                    android:id="@+id/other"
+                    style="@style/textStyle14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/other" />
+            </RadioGroup>
+
+
+            <include
+                android:id="@+id/userDescriptionContainer"
+                layout="@layout/layout_input_field"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/m_16dp" />
+
+            <include
+                android:id="@+id/addUser"
+                layout="@layout/layout_button_component"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/m_16dp"
+                android:layout_marginBottom="@dimen/m_16dp" />
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</layout>

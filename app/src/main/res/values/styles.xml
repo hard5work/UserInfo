@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="textStyle16">
+        <item name="android:fontFamily">@font/poppins_regular_400</item>
+        <item name="android:textSize">@dimen/t_16sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="textStyle18">
+        <item name="android:fontFamily">@font/poppins_regular_400</item>
+        <item name="android:textSize">@dimen/t_18sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="textStyle14">
+        <item name="android:fontFamily">@font/poppins_regular_400</item>
+        <item name="android:textSize">@dimen/t_14sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="textStyle12">
+        <item name="android:fontFamily">@font/poppins_regular_400</item>
+        <item name="android:textSize">@dimen/t_12sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="textStyle24">
+        <item name="android:fontFamily">@font/poppins_bold_700</item>
+        <item name="android:textSize">@dimen/t_24sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+
+    <style name="textStyle20">
+        <item name="android:fontFamily">@font/poppins_bold_700</item>
+        <item name="android:textSize">@dimen/t_20sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="DialogStyle" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+
+</resources>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="userModel"
+            type="com.anish.app.users.models.UsersModel" />
+    </data>
+
+    <LinearLayout
+        android:id="@+id/mainContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/m_16dp"
+        android:layout_marginTop="@dimen/m_6dp"
+        android:layout_marginBottom="@dimen/m_6dp"
+        android:background="@color/backgroundColor"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/m_10dp"
+        android:paddingVertical="@dimen/m_5dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/m_5dp">
+
+            <TextView
+                android:id="@+id/userName"
+                style="@style/textStyle14"
+                android:layout_width="@dimen/m_0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/m_10dp"
+                android:drawablePadding="@dimen/m_6dp"
+                android:text="@{userModel.name}"
+                app:drawableStartCompat="@drawable/ic_username"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/gender"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/gender"
+                style="@style/textStyle14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/m_6dp"
+                android:text="@{userModel.gender}"
+                app:drawableStartCompat="@drawable/ic_man"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            style="@style/textStyle14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/m_10dp"
+            android:drawablePadding="@dimen/m_6dp"
+            android:text="@{userModel.email}"
+            app:drawableStartCompat="@drawable/ic_email" />
+
+        <TextView
+            style="@style/textStyle14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/m_10dp"
+            android:drawablePadding="@dimen/m_6dp"
+            android:text="@{userModel.address}"
+            app:drawableStartCompat="@drawable/ic_address" />
+
+        <TextView
+            style="@style/textStyle14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/m_10dp"
+            android:layout_marginBottom="@dimen/m_5dp"
+            android:drawablePadding="@dimen/m_6dp"
+            android:text="@{userModel.description}"
+            app:drawableStartCompat="@drawable/ic_description" />
+
+    </LinearLayout>
+
+</layout>
