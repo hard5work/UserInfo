@@ -85,6 +85,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+    /** Obsever to show toast whether data is successfully added or updated */
     private fun observerMessage() {
         lifecycleScope.launch {
             successMessage.collect {
@@ -93,6 +94,8 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
+
+    /** to prevent mutliple click on adapter items */
 
     private fun preventDoubleClick() {
         Handler(Looper.getMainLooper()).postDelayed({

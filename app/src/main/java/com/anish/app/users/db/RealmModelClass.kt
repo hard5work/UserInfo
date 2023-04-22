@@ -18,10 +18,12 @@ class RealmModelClass {
         Log.e("UserModel", "Successfully opened realm: ${realm?.configuration?.name}")
     }
 
+    /** Close Database*/
     fun closeRealm() {
         realm?.close()
     }
 
+    /** pass parameters #user -> to insert data into database and listener to check whether data is added or not */
     suspend fun addData(user: UsersModel, dataAddedListener: DataAddedListener) {
 
         try {
@@ -43,6 +45,7 @@ class RealmModelClass {
 
     }
 
+    /** pass parameter #user -> to update the user information and listener to check whether data is updated or not */
     suspend fun update(user: UsersModel, dataAddedListener: DataAddedListener) {
         realm?.write {
             // fetch a frog from the realm based on some query

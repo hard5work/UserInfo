@@ -8,6 +8,8 @@ import com.anish.app.users.utils.interfaces.DataListener
 import com.anish.app.users.utils.layouts.ButtonComponent
 import com.anish.app.users.utils.layouts.TextInputComponent
 
+
+/** Layout component to add/ edit user. Component is used as bottomsheet to view and add data.*/
 class CreateUserLayout(
     private val bind: LayoutUserInformationContainerBinding,
     dataInterface: DataListener
@@ -67,6 +69,7 @@ class CreateUserLayout(
 
     }
 
+    /** type function is used whether to add or update data. Where add is false and update is true*/
     fun setType(t: Boolean) {
         type = t
         val titleText = if (type) "User Information" else "Create User"
@@ -75,11 +78,13 @@ class CreateUserLayout(
         bind.titleText.text = titleText
     }
 
+    /** function to add max id to insert into database */
     fun maxId(id: Int): Int {
         maxID = id + 1
         return maxID
     }
 
+    /** Update data and data binding for respective fields */
     fun updateData(usersModel: UsersModel) {
         maxID = usersModel.id!!
         this.usersModel = usersModel
